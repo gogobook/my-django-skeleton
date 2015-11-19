@@ -11,26 +11,27 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
-ADMINS = [
-    ('Your Name', 'your_email@example.com'),
-]
 
-MANAGERS = ADMINS
-
-# Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
 
-    'django_extensions',
+EXTERNAL_APPS = [
+   'django_extensions',
     'compressor',
 
 ]
+
+INTERNAL_APPS = [
+
+]
+
+INSTALLED_APPS = DJANGO_APPS + EXTERNAL_APPS + INTERNAL_APPS
 
 MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -68,21 +69,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'src.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'products',
+        'USER': '...',
+        'PASSWORD': '...',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
 SITE_ID = 1
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
 
 LANGUAGE_CODE = 'ru-RU'
 
