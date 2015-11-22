@@ -9,7 +9,7 @@ SECRET_KEY = '...'
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
 
 
 DJANGO_APPS = [
@@ -28,7 +28,7 @@ EXTERNAL_APPS = [
 ]
 
 INTERNAL_APPS = [
-
+    'example',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + EXTERNAL_APPS + INTERNAL_APPS
@@ -44,7 +44,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
 ]
 
-COMPRESS_ROOT = os.path.join(BASE_DIR, 'src/public/static')
+COMPRESS_ROOT = os.path.join(BASE_DIR, 'public/static')
 
 COMPRESS_ENABLED = True
 
@@ -54,7 +54,9 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'src/templates'), ],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,14 +96,14 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'src/public/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'public/media')
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'src/public/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'src/static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 STATICFILES_FINDERS = [
@@ -109,3 +111,4 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 ]
+
