@@ -2,6 +2,7 @@ My django-skeleton project
 =====
 
 Testing skeleton for django projects
+Add bower in project
 
 Install
 =======
@@ -22,3 +23,13 @@ First application
     $django-admin startapp coolapp
     
 
+Install Bower
+=====
+
+    $npm install -g bower
+
+setting project and packages in bower.json
+
+install packages
+
+    $bower install
