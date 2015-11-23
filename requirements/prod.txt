@@ -6,6 +6,5 @@ django-compressor==1.5
 django-extensions==1.5.9
 six==1.10.0
 sqlparse==0.1.18
-wheel==0.24.0
 
 gunicorn
