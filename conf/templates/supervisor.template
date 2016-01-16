@@ -1,0 +1,9 @@
+[program:{{ project }}]
+
+command=sh /home/{{ user }}/projects/{{ project }}/run/run.sh
+directory=/home/{{ user }}/projects/{{ project }}/
+user={{ user }}
+autostart=true
+autorestart=true
+stderr_logfile=/home/{{ user }}/logs/{{ project }}/gunicorn-errors.log
+stdout_logfile=/home/{{ user }}/logs/{{ project }}/gunicorn-access.log

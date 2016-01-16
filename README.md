@@ -9,7 +9,6 @@ Install
 
 To create your new project, run the following command
 
-
     $ django-admin.py startproject --template https://github.com/mitrofun/my-django-skeleton/zipball/master bestproject
     
 When 
@@ -33,3 +32,6 @@ setting project and packages in bower.json
 install packages
 
     $bower install
+
+Deploy project
+=====

@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from .common import *
+
+SECRET_KEY = '{{ secret_key }}'
+
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['{{ project }}','www.{{ project }}']
+
+ADMINS = [
+
+]
+
+MANAGERS = ADMINS
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{{ pg_database }}',
+        'USER': '{{ pg_user }}',
+        'PASSWORD': '{{ pg_password }}',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/{{ radis_db }}",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}

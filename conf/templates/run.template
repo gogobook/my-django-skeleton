@@ -1,0 +1,15 @@
+#!/bin/sh
+
+NAME={{ project }}
+SRCDIR={{ project }}
+
+GUNICORN=gunicorn
+HOMEDIR=/home/{{ user }}
+
+VIRTUALENV=${HOMEDIR}/.env/${NAME}
+PROJECTDIR=${HOMEDIR}/projects/${NAME}
+SOCKFILE=${PROJECTDIR}/run/gunicorn.sock
+
+. ${VIRTUALENV}/bin/activate
+cd ${PROJECTDIR}
+gunicorn src.wsgi:application --bind unix:${SOCKFILE}
