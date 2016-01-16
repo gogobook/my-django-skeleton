@@ -22,9 +22,8 @@ DJANGO_APPS = [
 ]
 
 EXTERNAL_APPS = [
-   'django_extensions',
+    'django_extensions',
     'compressor',
-
 ]
 
 INTERNAL_APPS = [
