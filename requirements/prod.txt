@@ -1,2 +1,0 @@
-psycopg2==2.5.3
-gunicorn==19.4.5

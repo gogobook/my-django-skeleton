@@ -1,3 +1,4 @@
+/src/static/vendor
 /src/static/bower_components
 /src/settings/local.py
 /src/public
