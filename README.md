@@ -15,7 +15,7 @@ When
     
     $ cd bestproject
     $ rm README.md
-    
+    $ pip install -r requirements.txt
 First application
     
     $cd src\apps
@@ -33,5 +33,3 @@ install packages
 
     $bower install
 
-Deploy project
-=====
