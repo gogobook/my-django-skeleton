@@ -1,25 +1,29 @@
 My django-skeleton project
 =====
 
-Testing skeleton for django projects
+Skeleton for my django projects
 Add bower in project
 
 Install
 =======
 
 To create your new project, run the following command
+-----
 
-    $ django-admin.py startproject --template https://github.com/mitrofun/my-django-skeleton/zipball/master bestproject
+    $ django-admin.py startproject --template https://github.com/mitrofun/my-django-skeleton/zipball/master name_project
     
-When 
+Install libs
+----
     
-    $ cd bestproject
+    $ cd name_project
     $ rm README.md
     $ pip install -r requirements.txt
-First application
+    
+Add application
+----
     
     $cd src\apps
-    $django-admin startapp coolapp
+    $django-admin startapp name_app
     
 
 Install Bower

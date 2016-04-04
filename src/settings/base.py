@@ -3,6 +3,8 @@ import sys
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
 SECRET_KEY = '...'
@@ -43,7 +45,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
 ]
 
-COMPRESS_ROOT = os.path.join(BASE_DIR, 'public','static')
+COMPRESS_ROOT = os.path.join(ROOT_DIR, 'public', 'static')
 
 COMPRESS_ENABLED = True
 
@@ -83,7 +85,7 @@ DATABASES = {
 
 SITE_ID = 1
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -95,11 +97,11 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'public', 'media')
+MEDIA_ROOT = os.path.join(ROOT_DIR, 'public', 'media')
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'public', 'static')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
